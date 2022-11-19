@@ -12,14 +12,11 @@ jobs:
     steps:
      - name: Clone repo
        uses: actions/checkout@v3
-     - name: Change the directory
-       run:
-        cd theme
-
      - uses: actions/setup-node@v3
        with:
          node-version: 16
          cache: 'npm'
+         working-directory: theme/
 
      - name: Run gulp file
        run: | 
