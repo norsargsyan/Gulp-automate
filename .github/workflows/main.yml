@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  gulp:
+    name: Build gulp file
+    runs-on: self-hosted
+    steps: 
+     - name: Run gulp file
+       run: echo "Hello world"
