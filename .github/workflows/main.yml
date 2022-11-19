@@ -18,6 +18,8 @@ jobs:
          working-directory: theme/
 
      - name: Run gulp file
+       working-directory:
+        ./theme
        run: | 
          echo $(ls)
          ls -la
