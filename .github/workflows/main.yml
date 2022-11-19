@@ -9,6 +9,9 @@ jobs:
   gulp:
     name: Build gulp file
     runs-on: ubuntu-latest
-    steps: 
+    steps:
+     - name: Clone repo
+       uses: actions/checkout@v3
+
      - name: Run gulp file
        run: echo "Hello world"
