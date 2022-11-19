@@ -19,7 +19,7 @@ jobs:
 
      - name: Run gulp file
        run: | 
-         ls -la
+         echo $(ls)
          cd theme
          ls -la
          npm ci
