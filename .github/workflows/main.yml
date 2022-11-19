@@ -21,7 +21,5 @@ jobs:
        working-directory:
         ./theme
        run: | 
-         echo $(ls)
-         ls -la
          npm ci --no-progress
          npm run build --no-progress
