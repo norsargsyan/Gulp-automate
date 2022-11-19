@@ -19,6 +19,6 @@ jobs:
 
      - name: Run gulp file
        run: | 
-         npm ci
          cd theme/
+         npm ci
          npm run build
