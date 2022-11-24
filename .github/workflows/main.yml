@@ -26,5 +26,6 @@ jobs:
         working-directory:
           web/themes/custom/needle
         run: |
-          git status
-          git push
+          git add --force -- css/style.css
+          git commit --amend --no-edit 
+          git push -u -f
