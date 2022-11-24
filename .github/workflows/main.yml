@@ -27,7 +27,7 @@ jobs:
           web/themes/custom/needle
         run: |
           git add --force -- css/style.css
-          if [[ `git status --porcelain web/themes/custom/needle/css/style.css` ]]; then
+          if [[ `git status --porcelain css/style.css` ]]; then
             git commit --amend --no-edit 
             echo 'qaq'
           else
