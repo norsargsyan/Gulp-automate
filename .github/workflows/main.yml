@@ -29,8 +29,9 @@ jobs:
           git add --force -- css/style.css
           if [[ `git status --porcelain web/themes/custom/needle/css/style.css` ]]; then
             git commit --amend --no-edit 
-            echo 1
+            echo 'qaq'
           else
-            echo 2
+            echo 'qaq2'
+            git status
           fi
           git push -u -f
