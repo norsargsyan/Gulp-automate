@@ -6,20 +6,18 @@ on:
       - 'main'
 
 jobs:
-  gulp:
-    name: Build gulp file
+  build-css:
+    name: Build css file
     runs-on: self-hosted
     steps:
-     - name: Clone repo
-       uses: actions/checkout@v3
-     - uses: actions/setup-node@v3
-       with:
-         node-version: 16
-         working-directory: theme/
+      - uses: actions/checkout@v2
+        with:
+          node-version: 16
+          working-directory: web/themes/custom/needle
 
-     - name: Run gulp file
-       working-directory:
-        ./theme
-       run: | 
-         npm ci --no-progress
-         npm run build --no-progress
+      - name: Run gulp file
+        working-directory:
+          web/themes/custom/needle
+        run: |
+          npm ci --no-progress
+          npm run build --no-progress
