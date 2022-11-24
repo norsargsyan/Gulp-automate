@@ -21,3 +21,10 @@ jobs:
         run: |
           npm ci --no-progress
           npm run build --no-progress
+
+      - name: Add builded file to commit
+        working-directory:
+          web/themes/custom/needle
+        run: |
+          git status
+          git push
