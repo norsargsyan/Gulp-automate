@@ -26,12 +26,10 @@ jobs:
         working-directory:
           web/themes/custom/needle
         run: |
-          git add --force -- css/style.css
+          if  [[ `git check-ignore css/style.css` ]]; then     
+            git add --force -- css/style.css
+          fi   
           if [[ `git status --porcelain css/style.css` ]]; then
             git commit --amend --no-edit 
-            echo 'qaq'
-          else
-            echo 'qaq2'
-            git status
           fi
           git push -u -f
